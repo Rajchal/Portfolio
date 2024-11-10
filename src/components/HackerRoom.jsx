@@ -1,8 +1,8 @@
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
-  const { nodes, materials } = useGLTF('/scene.gltf')
+const HackerRoom=(props)=> {
+  const { nodes, materials } = useGLTF('/models/lowly.glb')
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -190,4 +190,6 @@ export function Model(props) {
   )
 }
 
-useGLTF.preload('/scene.gltf')
+useGLTF.preload('/models/lowly.glb')
+
+export default HackerRoom
