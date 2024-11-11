@@ -11,7 +11,7 @@ const Target = (props) => {
 
   useGSAP(() => {
     gsap.to(targetRef.current.position, {
-      y: targetRef.current.position.y - 1,
+      y: targetRef.current.position.y - 4.5,
       duration: 1.5,
       repeat: -1,
       yoyo: true,
