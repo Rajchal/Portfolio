@@ -7,11 +7,12 @@ import { Leva, useControls } from "leva";
 const Hero = () => {
   const x = useControls("HackerRoom", {
     positionX: { value: 2.5, min: -10, max: 10 },
-    positionY: { value: 2.5, min: -10, max: 10 },
+    positionY: { value: 2.5, min: -20, max: 10 },
     positionZ: { value: 2.5, min: -10, max: 10 },
     rotationX: { value: 2.5, min: -10, max: 10 },
     rotationY: { value: 2.5, min: -10, max: 10 },
     rotationZ: { value: 2.5, min: -10, max: 10 },
+    scale: { value: 0.07, min: 0.01, max: 0.1 },
   });
   return (
     <section className="min-h-screen border-2 border-blue-500 w-full flex flex-xol relative">
