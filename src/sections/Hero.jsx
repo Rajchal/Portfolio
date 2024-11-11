@@ -3,9 +3,11 @@ import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
 import HackerRoom from "/src/components/HackerRoom";
 import CanvasLoader from "../components/CanvasLoader";
+import Target from "../components/Target";
 // import { Leva, useControls } from "leva";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constants";
+import ReactLogo from "../components/ReactLogo";
 const Hero = () => {
   // const x = useControls("HackerRoom", {
   //   positionX: { value: 2.5, min: -10, max: 10 },
@@ -42,6 +44,11 @@ const Hero = () => {
               rotation={[3.3, 2.7, 3.15]}
               scale={sizes.deskScale}
             />
+            <group>
+              <Target position={sizes.targetPosition} />
+              <ReactLogo position={sizes.reactLogoPosition} />
+            </group>
+
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={0.5} />
           </Suspense>
