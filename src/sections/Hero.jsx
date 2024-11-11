@@ -30,12 +30,9 @@ const Hero = () => {
           <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
             <HackerRoom
-              //scale={0.07}
-              // position={[0,0,0]}
-              // rotation={[0,0,0]}
-              position={[x.positionX, x.positionY, x.positionZ]}
-              rotation={[x.rotationX, x.rotationY, x.rotationZ]}
-              scale={[x.scale, x.scale, x.scale]}
+              position={[-0.5, -15.4, -8.5]}
+              rotation={[3.3, 2.7, 3.15]}
+              scale={0.1}
             />
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={0.5} />
