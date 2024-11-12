@@ -1,8 +1,10 @@
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from "react";
+import { useGLTF, useTexture } from "@react-three/drei";
 
-const HackerRoom=(props)=> {
-  const { nodes, materials } = useGLTF('/models/lowly.glb')
+const HackerRoom = (props) => {
+  const { nodes, materials } = useGLTF("/models/lowly.glb");
+  const monitorTextures = useTexture("/textures/desk/monitor.png");
+  const screenTextures = useTexture("/textures/desk/screen.png");
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -187,9 +189,9 @@ const HackerRoom=(props)=> {
         scale={[0.192, 0.144, 0.096]}
       />
     </group>
-  )
-}
+  );
+};
 
-useGLTF.preload('/models/lowly.glb')
+useGLTF.preload("/models/lowly.glb");
 
-export default HackerRoom
+export default HackerRoom;
