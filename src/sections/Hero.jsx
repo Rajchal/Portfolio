@@ -10,6 +10,7 @@ import { calculateSizes } from "../constants";
 import ReactLogo from "../components/ReactLogo";
 import Cube from "../components/Cube";
 import Rings from "../components/Rings";
+import HeroCamera from "../components/HeroCamera";
 const Hero = () => {
   // const x = useControls("HackerRoom", {
   //   positionX: { value: 2.5, min: -10, max: 10 },
@@ -41,11 +42,15 @@ const Hero = () => {
         <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 20]} />
-            <HackerRoom
-              position={sizes.deskPosition}
-              rotation={[3.3, 2.7, 3.15]}
-              scale={sizes.deskScale}
-            />
+            <HeroCamera isMobile={isMobile}>
+              {" "}
+              <HackerRoom
+                position={sizes.deskPosition}
+                rotation={[3.3, 2.7, 3.15]}
+                scale={sizes.deskScale}
+              />
+            </HeroCamera>
+
             <group>
               <Target position={sizes.targetPosition} />
               <ReactLogo position={sizes.reactLogoPosition} />
