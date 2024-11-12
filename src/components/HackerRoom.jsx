@@ -1,10 +1,8 @@
 import React, { useRef } from "react";
-import { useGLTF, useTexture } from "@react-three/drei";
+import { useGLTF } from "@react-three/drei";
 
 const HackerRoom = (props) => {
   const { nodes, materials } = useGLTF("/models/lowly.glb");
-  const monitorTextures = useTexture("/textures/desk/monitor.png");
-  const screenTextures = useTexture("/textures/desk/screen.png");
   return (
     <group {...props} dispose={null}>
       <mesh
