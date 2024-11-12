@@ -8,6 +8,7 @@ import Target from "../components/Target";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constants";
 import ReactLogo from "../components/ReactLogo";
+import Cube from "../components/Cube";
 const Hero = () => {
   // const x = useControls("HackerRoom", {
   //   positionX: { value: 2.5, min: -10, max: 10 },
@@ -47,6 +48,7 @@ const Hero = () => {
             <group>
               <Target position={sizes.targetPosition} />
               <ReactLogo position={sizes.reactLogoPosition} />
+              <Cube position={sizes.cubePosition} />
             </group>
 
             <ambientLight intensity={1} />
