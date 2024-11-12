@@ -10,13 +10,17 @@ const HeroCamera = ({ children, isMobile }) => {
     if (!isMobile) {
       easing.dampE(
         groupRef.current.rotation,
-        [-state.pointer.y, -state.pointer.x, 0],
+        [-state.pointer.y * 0.15, -state.pointer.x * 0.15, 0],
         0.25,
         delta
       );
     }
   });
-  return <group ref={groupRef}>{children}</group>;
+  return (
+    <group ref={groupRef} scale={isMobile ? 1 : 1.3}>
+      {children}
+    </group>
+  );
 };
 
 export default HeroCamera;
