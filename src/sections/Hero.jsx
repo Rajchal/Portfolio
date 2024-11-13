@@ -11,6 +11,7 @@ import ReactLogo from "../components/ReactLogo";
 import Cube from "../components/Cube";
 import Rings from "../components/Rings";
 import HeroCamera from "../components/HeroCamera";
+import Next from "../components/Next";
 const Hero = () => {
   // const x = useControls("HackerRoom", {
   //   positionX: { value: 2.5, min: -10, max: 10 },
@@ -56,10 +57,11 @@ const Hero = () => {
               <ReactLogo position={sizes.reactLogoPosition} />
               <Cube position={sizes.cubePosition} isMob={isMobile} />
               <Rings position={sizes.ringPosition} />
+              <Next position={sizes.nextPosition} />
             </group>
 
             <ambientLight intensity={1} />
-            <directionalLight position={[10, 10, 10]} intensity={0.5} />
+            <directionalLight position={[10, -4, 10]} intensity={0.5} />
           </Suspense>
         </Canvas>
       </div>
