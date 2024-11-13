@@ -255,32 +255,32 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
         ? [-0.5, -8.4, -8.5]
         : [-0.5, -10.4, -8.5],
     cubePosition: isSmall
-      ? [4, -5, 0]
+      ? [4, -9, 0]
       : isMobile
-        ? [5, -5, 0]
+        ? [5, -9, 0]
         : isTablet
-          ? [5, -5, 0]
-          : [9, -5.5, 0],
+          ? [10, -9, 0]
+          : [10, -5, 0],
     reactLogoPosition: isSmall
-      ? [3, -0.5, 0]
+      ? [4, -0, 0]
       : isMobile
-        ? [5, -2, 0]
+        ? [5, -0.5, 0]
         : isTablet
-          ? [6, -2, 0]
-          : [8, -2, 0],
+          ? [10, -2, 0]
+          : [10, -2, 0],
     ringPosition: isSmall
-      ? [-5, 7, 0]
+      ? [-5, -0, 0]
       : isMobile
-        ? [-10, 10, 0]
+        ? [-10, -0.5, 0]
         : isTablet
-          ? [-12, 10, 0]
-          : [-24, 10, 0],
+          ? [-15, -2, 0]
+          : [-15, -2, 0],
     targetPosition: isSmall
       ? [-5, -10, -10]
       : isMobile
         ? [-9, -10, -10]
         : isTablet
-          ? [-11, -7, -10]
+          ? [-11, -13, -10]
           : [-13, -13, -10],
   };
 };
