@@ -58,11 +58,11 @@ export const clientReviews = [
 
 export const myProjects = [
   {
-    title: "Podcastr - AI Podcast Platform",
-    desc: "Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.",
+    title: "Cook Fresh - Recipe Finding Platform",
+    desc: "Cook Fresh is a recipe-finding platform that helps users discover new dishes and cooking techniques. It offers a vast collection of recipes, cooking tips, and meal plans, making it easy for users to find the perfect recipe for any occasion.",
     subdesc:
-      "Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Framer Motion and Convex, Podcastr is designed for optimal performance and scalability.",
-    href: "https://www.youtube.com/watch?v=zfAb95tJvZQ",
+      "Built with Next.js, TailwindCSS, TypeScript, and Framer Motion, Cook Fresh provides a seamless user experience, with features like search filters, recipe categories, and a user-friendly interface.",
+    href: "https://www.cookfresh.online",
     texture: "/textures/project/project1.mp4",
     logo: "/assets/project-logo1.png",
     logoStyle: {
@@ -280,8 +280,8 @@ export const calculateSizes = (isSmall, isMobile, isTablet, isAwk) => {
       : isMobile
         ? [-15, -13, -10]
         : isTablet
-          ? [-11, -13, -10]
-          : [-13, -13, -10],
+          ? [-11, -10, -10]
+          : [-13, -10, -10],
     nextPosition: isSmall
       ? [4, -2, -10]
       : isMobile
