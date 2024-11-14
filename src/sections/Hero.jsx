@@ -17,10 +17,10 @@ const Hero = () => {
   //   positionX: { value: 2.5, min: -10, max: 10 },
   //   positionY: { value: 2.5, min: -20, max: 10 },
   //   positionZ: { value: 2.5, min: -10, max: 10 },
-  //   rotationX: { value: 2.5, min: -10, max: 10 },
-  //   rotationY: { value: 2.5, min: -10, max: 10 },
-  //   rotationZ: { value: 2.5, min: -10, max: 10 },
-  //   scale: { value: 0.07, min: 0.01, max: 0.1 },
+  //   // rotationX: { value: 2.5, min: -10, max: 10 },
+  //   // rotationY: { value: 2.5, min: -10, max: 10 },
+  //   // rotationZ: { value: 2.5, min: -10, max: 10 },
+  //   // scale: { value: 0.07, min: 0.01, max: 0.1 },
   // });
 
   const isSmall = useMediaQuery({ maxWidth: 440 });
@@ -61,7 +61,7 @@ const Hero = () => {
             </group>
 
             <ambientLight intensity={1} />
-            <directionalLight position={[10, -4, 10]} intensity={0.5} />
+            <directionalLight position={[5.0, 0.1, 3.5]} intensity={0.5} />
           </Suspense>
         </Canvas>
       </div>

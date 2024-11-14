@@ -283,11 +283,11 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
           ? [-11, -13, -10]
           : [-13, -13, -10],
     nextPosition: isSmall
-      ? [-7, -10, -10]
+      ? [2, -3, -10]
       : isMobile
-        ? [-9, -10, -10]
+        ? [2, -3, -10]
         : isTablet
-          ? [-11, -13, -10]
+          ? [5, -5, -10]
           : [5, -5, -10],
   };
 };
