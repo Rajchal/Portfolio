@@ -12,6 +12,7 @@ import Cube from "../components/Cube";
 import Rings from "../components/Rings";
 import HeroCamera from "../components/HeroCamera";
 import Next from "../components/Next";
+import Button from "../components/Button";
 const Hero = () => {
   // const x = useControls("HackerRoom", {
   //   positionX: { value: 2.5, min: -10, max: 10 },
@@ -26,8 +27,8 @@ const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ minWidth: 440, maxWidth: 768 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
-
-  const sizes = calculateSizes(isSmall, isMobile, isTablet);
+  const isAwk = useMediaQuery({ minWidth: 1024, maxWidth: 1074 });
+  const sizes = calculateSizes(isSmall, isMobile, isTablet, isAwk);
   return (
     <section className="min-h-screen w-full flex flex-xol relative">
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
@@ -52,7 +53,7 @@ const Hero = () => {
               />
             </HeroCamera>
 
-            <group>
+            <group scale={isMobile || isSmall ? 0.5 : 1}>
               <Target position={sizes.targetPosition} />
               <ReactLogo position={sizes.reactLogoPosition} />
               <Cube position={sizes.cubePosition} isMob={isMobile} />
@@ -64,6 +65,15 @@ const Hero = () => {
             <directionalLight position={[5.0, 0.1, 3.5]} intensity={0.5} />
           </Suspense>
         </Canvas>
+      </div>
+      <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
+        <a href="#contact" className="w-fit">
+          <Button
+            name="Let's work together"
+            isBeam
+            containerClass="sm:w-fit w-full sm:min-w-96"
+          />
+        </a>
       </div>
     </section>
   );

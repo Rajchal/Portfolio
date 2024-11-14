@@ -7,7 +7,6 @@ const Target = (props) => {
   const { nodes, materials } = useGLTF("/models/ts.glb");
   const groupRef = useRef();
   const [up, setUp] = useState(true);
-  const [rot, setRot] = useState(true);
 
   const isMobile = useMediaQuery({ minWidth: 440, maxWidth: 768 });
   const pp = isMobile ? -10 : -13;
@@ -15,19 +14,14 @@ const Target = (props) => {
   useFrame(() => {
     if (groupRef.current) {
       groupRef.current.position.y += up ? 0.01 : -0.01;
-      groupRef.current.rotation.y += rot ? 0.008 : -0.008;
-      groupRef.current.rotation.z += rot ? -0.0007 : +0.0007;
-      groupRef.current.rotation.x += rot ? -0.0007 : +0.00007;
       if (groupRef.current.position.y > pp + 0.5) setUp(false);
       if (groupRef.current.position.y < pp) setUp(true);
-      if (groupRef.current.position.y > pp + 0.5) setRot(false);
-      if (groupRef.current.position.y < pp) setRot(true);
     }
   });
 
   return (
     <group ref={groupRef} {...props} dispose={null}>
-      <group rotation={[Math.PI / 2, 0, -0.6]} scale={0.01 * 20}>
+      <group rotation={[Math.PI / 2 - 0.18, 0.8, -0.6]} scale={0.01 * 20}>
         <mesh
           castShadow
           receiveShadow

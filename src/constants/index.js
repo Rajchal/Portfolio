@@ -246,49 +246,51 @@ export const myProjects = [
   },
 ];
 
-export const calculateSizes = (isSmall, isMobile, isTablet) => {
+export const calculateSizes = (isSmall, isMobile, isTablet, isAwk) => {
   return {
     deskScale: isSmall ? 0.05 : isMobile ? 0.06 : 0.065,
     deskPosition: isSmall
       ? [-0.5, -6.4, -8.5]
       : isMobile
-        ? [-0.5, -8.4, -8.5]
+        ? [-2, -8.4, -8.5]
         : [-0.5, -10.4, -8.5],
     cubePosition: isSmall
-      ? [4, -9, 0]
+      ? [11, -13, 0]
       : isMobile
-        ? [5, -9, 0]
+        ? [11, -9, 0]
         : isTablet
           ? [10, -9, 0]
           : [10, -5, 0],
     reactLogoPosition: isSmall
-      ? [4, -0, 0]
+      ? [9, -0, 0]
       : isMobile
-        ? [5, -0.5, 0]
+        ? [10, -3, 0]
         : isTablet
           ? [10, -2, 0]
           : [10, -2, 0],
     ringPosition: isSmall
-      ? [-5, -0, 0]
+      ? [-12, 2, 0]
       : isMobile
         ? [-10, -0.5, 0]
         : isTablet
           ? [-15, -2, 0]
           : [-15, -2, 0],
     targetPosition: isSmall
-      ? [-5, -10, -10]
+      ? [-12, -10, -10]
       : isMobile
-        ? [-9, -10, -10]
+        ? [-15, -13, -10]
         : isTablet
           ? [-11, -13, -10]
           : [-13, -13, -10],
     nextPosition: isSmall
-      ? [2, -3, -10]
+      ? [4, -2, -10]
       : isMobile
-        ? [2, -3, -10]
-        : isTablet
-          ? [5, -5, -10]
-          : [5, -5, -10],
+        ? [6, -5, -10]
+        : isAwk
+          ? [9, -5, -10]
+          : isTablet
+            ? [7, -7, -10]
+            : [5, -5, -10],
   };
 };
 
