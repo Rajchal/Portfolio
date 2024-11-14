@@ -259,8 +259,8 @@ export const calculateSizes = (isSmall, isMobile, isTablet, isAwk) => {
       : isMobile
         ? [11, -9, 0]
         : isTablet
-          ? [10, -9, 0]
-          : [10, -5, 0],
+          ? [10, -6.5, 0]
+          : [10, -6.5, 0],
     reactLogoPosition: isSmall
       ? [9, -0, 0]
       : isMobile
