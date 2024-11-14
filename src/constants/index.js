@@ -255,35 +255,35 @@ export const calculateSizes = (isSmall, isMobile, isTablet, isAwk) => {
         ? [-2, -8.4, -8.5]
         : [-0.5, -10.4, -8.5],
     cubePosition: isSmall
-      ? [11, -13, 0]
+      ? [6.5, 0, 0]
       : isMobile
         ? [11, -9, 0]
         : isTablet
           ? [10, -6.5, 0]
           : [10, -6.5, 0],
     reactLogoPosition: isSmall
-      ? [9, -0, 0]
+      ? [4, 1, 0]
       : isMobile
         ? [10, -3, 0]
         : isTablet
           ? [10, -2, 0]
           : [10, -2, 0],
     ringPosition: isSmall
-      ? [-12, 2, 0]
+      ? [-5, 2, 0]
       : isMobile
         ? [-10, -0.5, 0]
         : isTablet
           ? [-15, -2, 0]
           : [-15, -2, 0],
     targetPosition: isSmall
-      ? [-12, -10, -10]
+      ? [-7.8, 0, -10]
       : isMobile
         ? [-15, -13, -10]
         : isTablet
           ? [-11, -10, -10]
           : [-13, -10, -10],
     nextPosition: isSmall
-      ? [4, -2, -10]
+      ? [1, -2, -10]
       : isMobile
         ? [6, -5, -10]
         : isAwk

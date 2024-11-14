@@ -9,7 +9,8 @@ const Target = (props) => {
   const [up, setUp] = useState(true);
 
   const isMobile = useMediaQuery({ minWidth: 440, maxWidth: 768 });
-  const pp = isMobile ? -10 : -10;
+  const isSmall = useMediaQuery({ maxWidth: 440 });
+  const pp = isSmall ? 0 : isMobile ? -10 : -10;
 
   useFrame(() => {
     if (groupRef.current) {
