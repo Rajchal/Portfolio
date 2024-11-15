@@ -1,5 +1,9 @@
 import { useState } from "react";
 import { myProjects } from "../constants";
+import { Canvas } from "@react-three/fiber";
+import { Center } from "@react-three/drei";
+import CanvasLoader from "../components/CanvasLoader";
+import { Sespense } from "react";
 
 const projectCount = myProjects.length;
 
@@ -86,7 +90,21 @@ const Projects = () => {
             </button>
           </div>
         </div>
-        <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full"></div>
+        <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
+          <Canvas>
+            <ambientLight intensity={1} />
+            <directionalLight position={[10, 10, 5]} />
+            <Center>
+              <Sespense fallback={<CanvasLoader />}>
+                <group
+                  scale={2}
+                  position={[0, -3, 0]}
+                  rotation={[0, -0.1, 0]}
+                ></group>
+              </Sespense>
+            </Center>
+          </Canvas>
+        </div>
       </div>
     </section>
   );
