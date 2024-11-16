@@ -24,35 +24,35 @@ export const navLinks = [
 export const clientReviews = [
   {
     id: 1,
-    name: "Emily Johnson",
-    position: "Marketing Director at GreenLeaf",
-    img: "assets/review1.png",
+    name: "Pranav Karmacharya",
+    position: "Marketing Director at Black Face",
+    img: "assets/pranav.png",
     review:
-      "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
+      "It's been a true pleasure working with Anjal. They consistently bring innovative ideas to the table and have a clear vision for their goals, making every partnership smooth and rewarding. Looking forward to many more successful collaborations!",
   },
   {
     id: 2,
-    name: "Mark Rogers",
-    position: "Founder of TechGear Shop",
-    img: "assets/review2.png",
+    name: "Krishal Shilpakar",
+    position: "Founder of Shilpakar Enterprises",
+    img: "assets/krishal.png",
     review:
-      "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.",
+      "Beyond his technical skills, Anjal is a great communicator, always ensuring a clear understanding of project requirements and providing regular updates. His dedication to meeting deadlines and exceeding expectations is impressive.",
   },
   {
     id: 3,
-    name: "John Dohsas",
-    position: "Project Manager at UrbanTech ",
-    img: "assets/review3.png",
+    name: "Yen Fatimah",
+    position: "Project Manager at Prasanna Retail & Wholesale",
+    img: "assets/yen.jpg",
     review:
-      "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
+      "As the lead UX/UI designer at a tech startup in Malaysia, I had the pleasure of collaborating with Anjal on a web development project that was both time-sensitive and complex. From the very beginning, Anjal stood out with his exceptional technical expertise and a keen understanding of user-centered design principles.",
   },
   {
     id: 4,
-    name: "Ether Smith",
-    position: "CEO of BrightStar Enterprises",
-    img: "assets/review4.png",
+    name: "Mihai Vasil",
+    position: "CEO of Vasil Technologies",
+    img: "assets/mihai.png",
     review:
-      "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.",
+      "If you’re a startup founder looking for a developer who can deliver exceptional results, Anjal is the one to call. I look forward to partnering with him on future projects!",
   },
 ];
 
@@ -326,3 +326,25 @@ export const workExperiences = [
     animation: "salute",
   },
 ];
+
+export const move = (x, y, z, po1, po2, po3) => {
+  if (x < po1) {
+    x += 0.01;
+  } else if (x > po2) {
+    x -= 0.01;
+  }
+
+  if (y < po2) {
+    y += 0.01;
+  } else if (y > po2) {
+    y -= 0.01;
+  }
+
+  if (z < po3) {
+    z += 0.01;
+  } else if (z > po3) {
+    z -= 0.01;
+  }
+
+  return [x, y, z];
+};

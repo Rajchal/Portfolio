@@ -30,7 +30,7 @@ const Hero = () => {
   const isAwk = useMediaQuery({ minWidth: 1024, maxWidth: 1074 });
   const sizes = calculateSizes(isSmall, isMobile, isTablet, isAwk);
   return (
-    <section className="min-h-screen w-full flex flex-xol relative">
+    <section className="min-h-screen w-full flex flex-xol relative" id="home">
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
         <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">
           Hi, I am Anjal <span className="waving-hand">👋</span>{" "}
