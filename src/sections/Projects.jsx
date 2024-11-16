@@ -34,16 +34,41 @@ const Projects = () => {
               className="w-full h-96 object-cover rounded-xl"
             />
           </div>
-          <div
-            className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg"
-            style={currentProject.logoStyle}
-          >
-            <img
-              src={currentProject.logo}
-              alt="logo"
-              className="w-10 h-10 shadow-sm"
-            />
+          <div className="flex justify-between">
+            <div
+              className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg"
+              style={currentProject.logoStyle}
+            >
+              <img
+                src={currentProject.logo}
+                alt="logo"
+                className="w-10 h-10 shadow-sm"
+              />
+            </div>
+            <div className="flex">
+              <button
+                className="arrow-btn z-10"
+                onClick={() => handleNavigation("previous")}
+              >
+                <img
+                  src="/assets/left-arrow.png"
+                  alt="left arrow"
+                  className="w-4 h-4"
+                />
+              </button>
+              <button
+                className="arrow-btn z-10"
+                onClick={() => handleNavigation("next")}
+              >
+                <img
+                  src="/assets/right-arrow.png"
+                  alt="right arrow"
+                  className="w-4 h-4"
+                />
+              </button>
+            </div>
           </div>
+
           <div className="flex flex-col gap-5 text-white-600 my-5">
             <p className="text-white text-2xl font-semibold animatedText">
               {currentProject.title}
@@ -68,28 +93,6 @@ const Projects = () => {
               <p>Check Live Site</p>
               <img src="/assets/arrow-up.png" className="w-3 h-3" alt="arrow" />
             </a>
-          </div>
-          <div className="flex justify-between items-center mt-7">
-            <button
-              className="arrow-btn"
-              onClick={() => handleNavigation("previous")}
-            >
-              <img
-                src="/assets/left-arrow.png"
-                alt="left arrow"
-                className="w-4 h-4"
-              />
-            </button>
-            <button
-              className="arrow-btn"
-              onClick={() => handleNavigation("next")}
-            >
-              <img
-                src="/assets/right-arrow.png"
-                alt="right arrow"
-                className="w-4 h-4"
-              />
-            </button>
           </div>
         </div>
         <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
