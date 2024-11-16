@@ -17,7 +17,7 @@ const Footer = () => {
             />
           </div>
         </a>
-        <a>
+        <a href="https://www.facebook.com/an.jal.98837/">
           <div className="social-icon">
             <img
               src="/assets/facebook.svg"
@@ -26,7 +26,7 @@ const Footer = () => {
             />
           </div>
         </a>
-        <a>
+        <a href="https://www.instagram.com/rajchalanjal/">
           <div className="social-icon">
             <img
               src="/assets/instagram.svg"
