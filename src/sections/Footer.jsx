@@ -8,7 +8,11 @@ const Footer = () => {
       </div>
 
       <div className="flex gap-3">
-        <a href="https://github.com/Rajchal">
+        <a
+          href="https://github.com/Rajchal"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="social-icon">
             <img
               src="/assets/github.svg"
@@ -17,7 +21,11 @@ const Footer = () => {
             />
           </div>
         </a>
-        <a href="https://www.facebook.com/an.jal.98837/">
+        <a
+          href="https://www.facebook.com/an.jal.98837/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="social-icon">
             <img
               src="/assets/facebook.svg"
@@ -26,7 +34,11 @@ const Footer = () => {
             />
           </div>
         </a>
-        <a href="https://www.instagram.com/rajchalanjal/">
+        <a
+          href="https://www.instagram.com/rajchalanjal/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="social-icon">
             <img
               src="/assets/instagram.svg"
