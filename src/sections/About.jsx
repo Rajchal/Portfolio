@@ -1,6 +1,6 @@
-import Globe from "react-globe.gl";
 import Button from "../components/Button";
 import { useState } from "react";
+import Globe from "react-globe.gl";
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
@@ -31,7 +31,7 @@ const About = () => {
           </div>
         </div>
         <div className="col-span-1 xl:row-span-3">
-          <div className="grid-container">
+          <div className="grid-container flex items-center justify-center">
             <img
               src="/assets/greed.png"
               alt="grid-2"
@@ -60,13 +60,14 @@ const About = () => {
                 bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
                 labelsData={[
                   {
-                    lat: 27.6973,
-                    lng: 85.3318,
+                    lat: 27.700769,
+                    lng: 85.30014,
                     text: "I'm Here!",
-                    color: "red",
-                    size: 100,
                   },
                 ]}
+                labelColor={() => "yellow"}
+                labelDotRadius={1}
+                labelSize={5}
               />
             </div>
             <div>

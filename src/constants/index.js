@@ -49,7 +49,7 @@ export const clientReviews = [
   {
     id: 4,
     name: "Mihai Vasil",
-    position: "CEO of Vasil Technologies",
+    position: "CEO of Hisal Technologies",
     img: "assets/mihai.png",
     review:
       "If you’re a startup founder looking for a developer who can deliver exceptional results, Anjal is the one to call. I look forward to partnering with him on future projects!",
