@@ -4,7 +4,7 @@ import { PerspectiveCamera } from "@react-three/drei";
 import HackerRoom from "/src/components/HackerRoom";
 import CanvasLoader from "../components/CanvasLoader";
 import Target from "../components/Target";
-import { Leva, useControls } from "leva";
+// import { Leva, useControls } from "leva";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constants";
 import ReactLogo from "../components/ReactLogo";
@@ -14,15 +14,15 @@ import HeroCamera from "../components/HeroCamera";
 import Next from "../components/Next";
 import Button from "../components/Button";
 const Hero = () => {
-  const x = useControls("HackerRoom", {
-    positionX: { value: 2.5, min: -10, max: 10 },
-    positionY: { value: 2.5, min: -20, max: 10 },
-    positionZ: { value: 2.5, min: -10, max: 10 },
-    rotationX: { value: 2.5, min: -10, max: 10 },
-    rotationY: { value: 2.5, min: -10, max: 10 },
-    rotationZ: { value: 2.5, min: -10, max: 10 },
-    scale: { value: 0.07, min: 0.01, max: 10 },
-  });
+  // const x = useControls("HackerRoom", {
+  //   positionX: { value: 2.5, min: -10, max: 10 },
+  //   positionY: { value: 2.5, min: -20, max: 10 },
+  //   positionZ: { value: 2.5, min: -10, max: 10 },
+  //   rotationX: { value: 2.5, min: -10, max: 10 },
+  //   rotationY: { value: 2.5, min: -10, max: 10 },
+  //   rotationZ: { value: 2.5, min: -10, max: 10 },
+  //   scale: { value: 0.07, min: 0.01, max: 10 },
+  // });
 
   const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ minWidth: 440, maxWidth: 768 });
@@ -30,9 +30,9 @@ const Hero = () => {
   const isAwk = useMediaQuery({ minWidth: 1024, maxWidth: 1074 });
   const sizes = calculateSizes(isSmall, isMobile, isTablet, isAwk);
   return (
-    <section className="min-h-screen w-full flex flex-xol relative" id="home">
-      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
-        <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">
+    <section className="min-h-screen w-full flex flex-col relative" id="home">
+      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3 z-10 pointer-events-none">
+        <p className="sm:text-2xl text-xl font-medium text-white text-center font-generalsans">
           Hi, I am Anjal <span className="waving-hand">👋</span>{" "}
         </p>
         <p className="hero_tag text-gray_gradient text-center">
