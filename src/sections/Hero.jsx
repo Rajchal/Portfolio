@@ -44,12 +44,12 @@ const Hero = () => {
         <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 20]} />
-            <HeroCamera isMobile={isMobile}>
+            <HeroCamera>
               {" "}
               <HackerRoom
-                position={[x.positionX, x.positionY, x.positionZ]}
-                rotation={[x.rotationX, x.rotationY, x.rotationZ]}
-                scale={x.scale}
+                position={sizes.deskPosition}
+                rotation={[-9.5, 3.9, 3.1]}
+                scale={sizes.deskScale}
               />
             </HeroCamera>
 
