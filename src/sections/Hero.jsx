@@ -4,7 +4,7 @@ import { PerspectiveCamera } from "@react-three/drei";
 import HackerRoom from "/src/components/HackerRoom";
 import CanvasLoader from "../components/CanvasLoader";
 import Target from "../components/Target";
-// import { Leva, useControls } from "leva";
+import { Leva, useControls } from "leva";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constants";
 import ReactLogo from "../components/ReactLogo";
@@ -14,15 +14,15 @@ import HeroCamera from "../components/HeroCamera";
 import Next from "../components/Next";
 import Button from "../components/Button";
 const Hero = () => {
-  // const x = useControls("HackerRoom", {
-  //   positionX: { value: 2.5, min: -10, max: 10 },
-  //   positionY: { value: 2.5, min: -20, max: 10 },
-  //   positionZ: { value: 2.5, min: -10, max: 10 },
-  //   // rotationX: { value: 2.5, min: -10, max: 10 },
-  //   // rotationY: { value: 2.5, min: -10, max: 10 },
-  //   // rotationZ: { value: 2.5, min: -10, max: 10 },
-  //   // scale: { value: 0.07, min: 0.01, max: 0.1 },
-  // });
+  const x = useControls("HackerRoom", {
+    positionX: { value: 2.5, min: -10, max: 10 },
+    positionY: { value: 2.5, min: -20, max: 10 },
+    positionZ: { value: 2.5, min: -10, max: 10 },
+    rotationX: { value: 2.5, min: -10, max: 10 },
+    rotationY: { value: 2.5, min: -10, max: 10 },
+    rotationZ: { value: 2.5, min: -10, max: 10 },
+    scale: { value: 0.07, min: 0.01, max: 10 },
+  });
 
   const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ minWidth: 440, maxWidth: 768 });
@@ -47,9 +47,9 @@ const Hero = () => {
             <HeroCamera isMobile={isMobile}>
               {" "}
               <HackerRoom
-                position={sizes.deskPosition}
-                rotation={[3.3, 2.7, 3.15]}
-                scale={sizes.deskScale}
+                position={[x.positionX, x.positionY, x.positionZ]}
+                rotation={[x.rotationX, x.rotationY, x.rotationZ]}
+                scale={x.scale}
               />
             </HeroCamera>
 

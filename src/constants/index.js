@@ -276,12 +276,12 @@ export const calculateSizes = (isSmall, isMobile, isTablet, isAwk) => {
           ? [-15, -2, 0]
           : [-15, -2, 0],
     targetPosition: isSmall
-      ? [-7.8, 0, -10]
+      ? [-7.8, 0, 1]
       : isMobile
-        ? [-15, -13, -10]
+        ? [-15, -13, 1]
         : isTablet
-          ? [-11, -10, -10]
-          : [-13, -10, -10],
+          ? [-11, -10, 1]
+          : [-13, -4, 1],
     nextPosition: isSmall
       ? [1, -2, -10]
       : isMobile
