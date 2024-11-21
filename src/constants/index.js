@@ -45,17 +45,9 @@ export const clientReviews = [
   },
   {
     id: 3,
-    name: "Yen Fatimah",
-    position: "Project Manager at Prasanna Retail & Wholesale",
-    img: "assets/yen.jpg",
-    review:
-      "As the lead UX/UI designer at a tech startup in Malaysia, I had the pleasure of collaborating with Anjal on a web development project that was both time-sensitive and complex. From the very beginning, Anjal stood out with his exceptional technical expertise and a keen understanding of user-centered design principles.",
-  },
-  {
-    id: 4,
-    name: "Mihai Vasil",
-    position: "CEO of Hisal Technologies",
-    img: "assets/mihai.png",
+    name: "Abheet Budhathoki",
+    position: "CEO of Budhathoki Handicrafts",
+    img: "assets/abheet.png",
     review:
       "If you’re a startup founder looking for a developer who can deliver exceptional results, Anjal is the one to call. I look forward to partnering with him on future projects!",
   },
@@ -69,9 +61,9 @@ export const myProjects = [
       "Built with Next.js, TailwindCSS, TypeScript, and Framer Motion, Cook Fresh provides a seamless user experience, with features like search filters, recipe categories, and a user-friendly interface.",
     href: "https://www.cookfresh.online",
     texture: "/textures/project/project1.mp4",
-    logo: "/assets/project-logo1.png",
+    logo: "/assets/proj1.svg",
     logoStyle: {
-      backgroundColor: "#2A1816",
+      backgroundColor: "#FFFFFF",
       border: "0.2px solid #36201D",
       boxShadow: "0px 0px 60px 0px #AA3C304D",
     },

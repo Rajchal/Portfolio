@@ -43,8 +43,7 @@ const Contact = () => {
         <div className="contact-container">
           <h3 className="head-text pt-[25px]">Let&apos;s talk</h3>
           <p className="text-lg text-white-600 mt-3">
-            Whether you’re looking to build a new website, improve your existing
-            platform, or bring a unique project to life, I’m here to help.
+            Have a question or want to work together?
           </p>
 
           <form
@@ -61,7 +60,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 className="field-input"
-                placeholder="ex., John Doe"
+                placeholder="Your Full Name.."
               />
             </label>
 
@@ -74,7 +73,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 className="field-input"
-                placeholder="ex., johndoe@gmail.com"
+                placeholder="Your email address.."
               />
             </label>
 
@@ -87,7 +86,7 @@ const Contact = () => {
                 required
                 rows={5}
                 className="field-input"
-                placeholder="Share your thoughts or inquiries..."
+                placeholder="I want to hire you..."
               />
             </label>
 
