@@ -60,7 +60,7 @@ export const myProjects = [
     subdesc:
       "Built with Next.js, TailwindCSS, TypeScript, and Framer Motion, Cook Fresh provides a seamless user experience, with features like search filters, recipe categories, and a user-friendly interface.",
     href: "https://www.cookfresh.online",
-    texture: "/textures/project/project1.mp4",
+    texture: "/textures/project/cookydemo.mp4",
     logo: "/assets/proj1.svg",
     logoStyle: {
       backgroundColor: "#FFFFFF",
@@ -97,7 +97,7 @@ export const myProjects = [
     subdesc:
       "Built with React.js, TailwindCSS, TypeScript, and Next Js, Landing Page offers a seamless user experience, with features like smooth animations, responsive design, and a user-friendly interface.",
     href: "https://www.itgyanepal.com/membership",
-    texture: "/textures/project/project2.mp4",
+    texture: "/textures/project/itgyandemo.mp4",
     logo: "/assets/project-logo2.png",
     logoStyle: {
       backgroundColor: "#13202F",
@@ -134,7 +134,7 @@ export const myProjects = [
     subdesc:
       "It provides AI support for answers and questions, and a user-friendly interface. Built with React.js, TailwindCSS, TypeScript, and NextJs, IT GyaNepal offers a seamless user experience, with features like search filters, study materials, and a user-friendly interface.",
     href: "https://www.itgyanepal.com/",
-    texture: "/textures/project/project3.mp4",
+    texture: "/textures/project/itgyandemo.mp4",
     logo: "/assets/project-logo3.png",
     logoStyle: {
       backgroundColor: "#60f5a1",
@@ -162,8 +162,8 @@ export const myProjects = [
       },
       {
         id: 4,
-        name: "Framer Motion",
-        path: "/assets/framer.png",
+        name: "Next Js",
+        path: "/assets/next.png",
       },
     ],
   },
