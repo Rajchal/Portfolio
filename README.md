@@ -8,3 +8,5 @@ Welcome to my portfolio!
 - [Projects](#projects)
 - [Skills](#skills)
 - [Contact](#contact)
+
+Made with vite
