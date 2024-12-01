@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, memo } from "react";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
 import HackerRoom from "/src/components/HackerRoom";
@@ -13,6 +13,10 @@ import Rings from "../components/Rings";
 import HeroCamera from "../components/HeroCamera";
 import Next from "../components/Next";
 import Button from "../components/Button";
+
+const MemoizedHackerRoom = memo(HackerRoom);
+const MemoizedCanvasLoader = memo(CanvasLoader);
+
 const Hero = () => {
   // const x = useControls("HackerRoom", {
   //   positionX: { value: 2.5, min: -10, max: 10 },
@@ -41,12 +45,12 @@ const Hero = () => {
       </div>
       <div className="w-full h-full absolute inset-0">
         {/* <Leva /> */}
-        <Canvas className="w-full h-full">
-          <Suspense fallback={<CanvasLoader />}>
+        <Canvas className="w-full h-full" shadows dpr={[1, 2]}>
+          <Suspense fallback={<MemoizedCanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 20]} />
             <HeroCamera>
               {" "}
-              <HackerRoom
+              <MemoizedHackerRoom
                 position={sizes.deskPosition}
                 rotation={[-9.5, 3.9, 3.1]}
                 scale={sizes.deskScale}
@@ -61,7 +65,7 @@ const Hero = () => {
               <Next position={sizes.nextPosition} />
             </group>
 
-            <ambientLight intensity={1} />
+            <ambientLight intensity={0.8} />
             <directionalLight position={[5.0, 0.1, 3.5]} intensity={0.5} />
           </Suspense>
         </Canvas>

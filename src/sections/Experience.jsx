@@ -1,10 +1,13 @@
-import { Suspense, useState } from "react";
+import { Suspense, useState, memo } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 
 import Developer from "../components/Developer.jsx";
 import CanvasLoader from "../components/CanvasLoader.jsx";
 import { workExperiences } from "../constants/index.js";
+
+const MemoizedDeveloper = memo(Developer);
+const MemoizedCanvasLoader = memo(CanvasLoader);
 
 const WorkExperience = () => {
   const [animationName, setAnimationName] = useState("idle");
@@ -16,14 +19,14 @@ const WorkExperience = () => {
 
         <div className="work-container">
           <div className="work-canvas">
-            <Canvas>
-              <ambientLight intensity={7} />
+            <Canvas shadows dpr={[1, 2]}>
+              <ambientLight intensity={0.8} />
               <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
               <directionalLight position={[10, 10, 10]} intensity={1} />
               <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
 
-              <Suspense fallback={<CanvasLoader />}>
-                <Developer
+              <Suspense fallback={<MemoizedCanvasLoader />}>
+                <MemoizedDeveloper
                   position-y={-3}
                   scale={3}
                   animationName={animationName}
