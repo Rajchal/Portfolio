@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useState, Suspense, lazy, memo } from "react";
 import { myProjects } from "../constants";
 import { Canvas } from "@react-three/fiber";
 import { Center } from "@react-three/drei";
 import CanvasLoader from "../components/CanvasLoader";
-import { Suspense } from "react";
-import DemoComputer from "../components/DemoComputer";
 import { OrbitControls } from "@react-three/drei";
+
+const DemoComputer = lazy(() => import("../components/DemoComputer"));
+const MemoizedDemoComputer = memo(DemoComputer);
+const MemoizedCanvasLoader = memo(CanvasLoader);
 
 const projectCount = myProjects.length;
 
@@ -70,11 +72,11 @@ const Projects = () => {
           </div>
 
           <div className="flex flex-col gap-5 text-white-600 my-5">
-            <p className="text-white text-2xl font-semibold animatedText">
+            <div className="text-white text-2xl font-semibold animatedText">
               {currentProject.title}
               <p className="animatedText">{currentProject.desc}</p>
               <p className="animatedText">{currentProject.subdesc}</p>
-            </p>
+            </div>
           </div>
           <div className="flex items-center justify-between flex-wrap gap-5">
             <div className="flex items-center gap-3">
@@ -96,13 +98,13 @@ const Projects = () => {
           </div>
         </div>
         <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
-          <Canvas>
-            <ambientLight intensity={Math.PI} />
+          <Canvas shadows dpr={[1, 2]}>
+            <ambientLight intensity={0.8} />
             <directionalLight position={[10, 10, 5]} />
             <Center>
-              <Suspense fallback={<CanvasLoader />}>
+              <Suspense fallback={<MemoizedCanvasLoader />}>
                 <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
-                  <DemoComputer texture={currentProject.texture} />
+                  <MemoizedDemoComputer texture={currentProject.texture} />
                 </group>
               </Suspense>
             </Center>

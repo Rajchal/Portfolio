@@ -1,11 +1,10 @@
-import { Suspense, useState, memo } from "react";
+import { Suspense, useState, memo, lazy } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 
-import Developer from "../components/Developer.jsx";
 import CanvasLoader from "../components/CanvasLoader.jsx";
 import { workExperiences } from "../constants/index.js";
-
+const Developer = lazy(() => import("../components/Developer.jsx"));
 const MemoizedDeveloper = memo(Developer);
 const MemoizedCanvasLoader = memo(CanvasLoader);
 

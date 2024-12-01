@@ -1,19 +1,20 @@
-import { Suspense, memo } from "react";
+import { Suspense, memo, lazy } from "react";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
-import HackerRoom from "/src/components/HackerRoom";
 import CanvasLoader from "../components/CanvasLoader";
-import Target from "../components/Target";
+
 // import { Leva, useControls } from "leva";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constants";
-import ReactLogo from "../components/ReactLogo";
-import Cube from "../components/Cube";
-import Rings from "../components/Rings";
 import HeroCamera from "../components/HeroCamera";
-import Next from "../components/Next";
 import Button from "../components/Button";
 
+const HackerRoom = lazy(() => import("../components/HackerRoom"));
+const ReactLogo = lazy(() => import("../components/ReactLogo"));
+const Cube = lazy(() => import("../components/Cube"));
+const Rings = lazy(() => import("../components/Rings"));
+const Target = lazy(() => import("../components/Target"));
+const Next = lazy(() => import("../components/Next"));
 const MemoizedHackerRoom = memo(HackerRoom);
 const MemoizedCanvasLoader = memo(CanvasLoader);
 
