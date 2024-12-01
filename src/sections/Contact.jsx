@@ -1,5 +1,6 @@
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
+import LazyLoad from "react-lazyload";
 
 const Contact = () => {
   const formRef = useRef();
@@ -92,12 +93,13 @@ const Contact = () => {
 
             <button className="field-btn" type="submit" disabled={loading}>
               {loading ? "Sending..." : "Send Message"}
-
-              <img
-                src="/assets/arrow-up.png"
-                alt="arrow-up"
-                className="field-btn_arrow"
-              />
+              <LazyLoad>
+                <img
+                  src="/assets/arrow-up.png"
+                  alt="arrow-up"
+                  className="field-btn_arrow"
+                />
+              </LazyLoad>
             </button>
           </form>
         </div>
