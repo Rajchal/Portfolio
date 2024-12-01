@@ -4,12 +4,12 @@ import { clientReviews } from "../constants";
 const Clients = () => {
   return (
     <section className="c-space my-20">
-      <h3 className="head-text">Hear from My Clients</h3>
+      <h5 className="head-text">Hear from My Clients</h5>
       <div className="client-container">
         {clientReviews.map(({ id, name, review, img, position }) => (
           <div key={id} className="client-review">
             <div>
-              <p className="text-white font-light">{review}</p>
+              <h6 className="text-white font-light">{review}</h6>
               <div className="client-content">
                 <div className="flex gap-3">
                   <LazyLoad height={12}>

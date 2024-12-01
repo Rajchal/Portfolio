@@ -75,7 +75,9 @@ const Projects = () => {
             <div className="text-white text-2xl font-semibold animatedText">
               {currentProject.title}
               <p className="animatedText">{currentProject.desc}</p>
-              <p className="animatedText">{currentProject.subdesc}</p>
+              <p className="pt-3 text-xl text-gray-400">
+                {currentProject.subdesc}
+              </p>
             </div>
           </div>
           <div className="flex items-center justify-between flex-wrap gap-5">

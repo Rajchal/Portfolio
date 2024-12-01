@@ -25,11 +25,11 @@ const About = () => {
               />
             </LazyLoad>
             <div>
-              <p className="grid-headtext">Hi, I&apos;m Anjal Rajchal</p>
-              <p className="grid-subtext">
+              <h2 className="grid-headtext">Hi, I&apos;m Anjal Rajchal</h2>
+              <h3 className="grid-subtext">
                 With 2 years of experience, I have honed my skills in frontend
                 and backend devlopment, with a focus on animated 3D websites.
-              </p>
+              </h3>
             </div>
           </div>
         </div>
@@ -44,11 +44,11 @@ const About = () => {
             </LazyLoad>
 
             <div>
-              <p className="grid-headtext">Technologies I use</p>
-              <p className="grid-subtext">
+              <h3 className="grid-headtext">Technologies I use</h3>
+              <h4 className="grid-subtext">
                 I specialize in JavaScript/TypeScript with a focus on React and
                 Next.js ecosystem
-              </p>
+              </h4>
             </div>
           </div>
         </div>
@@ -77,13 +77,13 @@ const About = () => {
               />
             </div>
             <div>
-              <p className="grid-headtext">
+              <h3 className="grid-headtext">
                 I work remotely across most timezones
-              </p>
-              <p className="grid-subtext">
+              </h3>
+              <h4 className="grid-subtext">
                 I&apos;m based in Kathmandu, Nepal, and work with clients
                 worldwide
-              </p>
+              </h4>
               <a href="#contact">
                 <Button
                   name="Contact Me"
@@ -105,11 +105,11 @@ const About = () => {
             </LazyLoad>
 
             <div>
-              <p className="grid-headtext">My passion for Coding</p>
-              <p className="grid-subtext">
+              <h3 className="grid-headtext">My passion for Coding</h3>
+              <h4 className="grid-subtext">
                 I love solving problems and building things through code. Coding
                 isn&apos;t just my profession -it is my passion.
-              </p>
+              </h4>
             </div>
           </div>
         </div>
@@ -124,7 +124,7 @@ const About = () => {
             </LazyLoad>
 
             <div className="space-y-2">
-              <p className="grid-subtext text-center ">Contact me</p>
+              <h3 className="grid-subtext text-center ">Contact me</h3>
               <div className="copy-container" onClick={handleCopy}>
                 <LazyLoad>
                   <img
@@ -133,9 +133,9 @@ const About = () => {
                   />
                 </LazyLoad>
 
-                <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">
+                <h4 className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">
                   rajchalanjal1@gmail.com
-                </p>
+                </h4>
               </div>
             </div>
           </div>
