@@ -9,6 +9,17 @@ import Experience from "./sections/Experience";
 import { Helmet } from "react-helmet";
 
 const App = () => {
+  const schemaMarkup = {
+    "@context": "http://schema.org",
+    "@type": "Person",
+    name: "Anjal Rajchal",
+    url: "https://www.rajchal.me",
+    sameAs: [
+      "https://www.linkedin.com/in/anjal-rajchal-a7b02a2b0/",
+      "https://github.com/Rajchal",
+    ],
+    jobTitle: "Frontend Developer",
+  };
   return (
     <main className="max-w-screen mx-0">
       <Helmet>
@@ -19,9 +30,12 @@ const App = () => {
         />
         <meta
           name="keywords"
-          content="Anjal Rajchal, portfolio, projects, experience, contact,Rajchal ,rajchal, anjal, rajchalanjal, anjalrajchal, anjal rajchal"
+          content="Anjal Rajchal, portfolio, projects, experience, contact, Rajchal, anjal, rajchalanjal, anjalrajchal, anjal rajchal, developer"
         />
         <link rel="canonical" href="https://www.rajchal.me" />
+        <script type="application/ld+json">
+          {JSON.stringify(schemaMarkup)}
+        </script>
       </Helmet>
       <Navbar />
       <Hero />
