@@ -49,7 +49,7 @@ const Hero = () => {
         <Canvas className="w-full h-full" shadows dpr={[1, 2]}>
           <Suspense fallback={<MemoizedCanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 20]} />
-            <HeroCamera>
+            <HeroCamera isMobile={isSmall}>
               {" "}
               <MemoizedHackerRoom
                 position={sizes.deskPosition}

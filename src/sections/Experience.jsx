@@ -4,18 +4,20 @@ import { OrbitControls } from "@react-three/drei";
 
 import CanvasLoader from "../components/CanvasLoader.jsx";
 import { workExperiences } from "../constants/index.js";
+import { useMediaQuery } from "react-responsive";
 
 const Developer = lazy(() => import("../components/Developer.jsx"));
 const MemoizedDeveloper = memo(Developer);
 const MemoizedCanvasLoader = memo(CanvasLoader);
 
 const WorkExperience = () => {
+  const isSmall = useMediaQuery({ maxWidth: 440 });
   const [animationName, setAnimationName] = useState("idle");
 
   return (
     <section className="c-space my-20" id="experience">
       <div className="w-full text-white-600">
-        <p className="head-text pt-20">My Work Experience</p>
+        <h3 className="head-text pt-20">My Work Experience</h3>
 
         <div className="work-container">
           <div className="work-canvas">
@@ -29,7 +31,7 @@ const WorkExperience = () => {
                 <MemoizedDeveloper
                   position-y={-3}
                   scale={3}
-                  animationName={animationName}
+                  animationName={isSmall ? "idle" : animationName}
                 />
               </Suspense>
             </Canvas>
