@@ -25,7 +25,6 @@
     "react-globe.gl": "^2.27.5",
     "react-helmet": "^6.1.0",
     "react-responsive": "^10.0.0",
-    "sitemap-generator": "^7.5.2",
     "three": "^0.170.0"
   },
   "devDependencies": {
