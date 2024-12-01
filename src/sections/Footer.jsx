@@ -1,5 +1,3 @@
-import LazyLoad from "react-lazyload";
-
 const Footer = () => {
   return (
     <footer className="c-space pt-7 pb-3 border-t border-black-300 flex justify-between items-center flex-wrap gap-5">
@@ -16,13 +14,11 @@ const Footer = () => {
           rel="noopener noreferrer"
         >
           <div className="social-icon">
-            <LazyLoad>
-              <img
-                src="/assets/github.svg"
-                alt="github"
-                className="w-1/2 h-1/2"
-              />
-            </LazyLoad>
+            <img
+              src="/assets/github.svg"
+              alt="github"
+              className="w-1/2 h-1/2"
+            />
           </div>
         </a>
         <a
@@ -31,13 +27,11 @@ const Footer = () => {
           rel="noopener noreferrer"
         >
           <div className="social-icon">
-            <LazyLoad>
-              <img
-                src="/assets/facebook.svg"
-                alt="twitter"
-                className="w-[30px] h-[30px]"
-              />
-            </LazyLoad>
+            <img
+              src="/assets/facebook.svg"
+              alt="twitter"
+              className="w-[30px] h-[30px]"
+            />
           </div>
         </a>
         <a
@@ -46,13 +40,11 @@ const Footer = () => {
           rel="noopener noreferrer"
         >
           <div className="social-icon">
-            <LazyLoad>
-              <img
-                src="/assets/instagram.svg"
-                alt="instagram"
-                className="w-1/2 h-1/2"
-              />
-            </LazyLoad>
+            <img
+              src="/assets/instagram.svg"
+              alt="instagram"
+              className="w-1/2 h-1/2"
+            />
           </div>
         </a>
       </div>

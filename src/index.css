@@ -22,11 +22,6 @@
   scroll-behavior: smooth;
 }
 
-body {
-  background: #010103;
-  font-family: "General Sans", sans-serif;
-}
-
 @layer utilities {
   .c-space {
     @apply sm:px-10 px-5;

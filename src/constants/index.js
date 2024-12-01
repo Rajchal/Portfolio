@@ -98,7 +98,7 @@ export const myProjects = [
       "Built with React.js, TailwindCSS, TypeScript, and Next Js, Landing Page offers a seamless user experience, with features like smooth animations, responsive design, and a user-friendly interface.",
     href: "https://www.itgyanepal.com/membership",
     texture: "/textures/project/itgyandemo.mp4",
-    logo: "/assets/project-logo2.png",
+    logo: "/assets/itgyanepal.png",
     logoStyle: {
       backgroundColor: "#13202F",
       border: "0.2px solid #17293E",
@@ -135,7 +135,7 @@ export const myProjects = [
       "It provides AI support for answers and questions, and a user-friendly interface. Built with React.js, TailwindCSS, TypeScript, and NextJs, IT GyaNepal offers a seamless user experience, with features like search filters, study materials, and a user-friendly interface.",
     href: "https://www.itgyanepal.com/",
     texture: "/textures/project/itgyandemo.mp4",
-    logo: "/assets/project-logo3.png",
+    logo: "/assets/itgyanepal.png",
     logoStyle: {
       backgroundColor: "#60f5a1",
       background:
