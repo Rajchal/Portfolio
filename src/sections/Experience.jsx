@@ -4,6 +4,7 @@ import { OrbitControls } from "@react-three/drei";
 
 import CanvasLoader from "../components/CanvasLoader.jsx";
 import { workExperiences } from "../constants/index.js";
+
 const Developer = lazy(() => import("../components/Developer.jsx"));
 const MemoizedDeveloper = memo(Developer);
 const MemoizedCanvasLoader = memo(CanvasLoader);
@@ -19,12 +20,12 @@ const WorkExperience = () => {
         <div className="work-container">
           <div className="work-canvas">
             <Canvas shadows dpr={[1, 2]}>
-              <ambientLight intensity={0.8} />
-              <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-              <directionalLight position={[10, 10, 10]} intensity={1} />
-              <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
-
               <Suspense fallback={<MemoizedCanvasLoader />}>
+                <ambientLight intensity={0.8} />
+                <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+                <directionalLight position={[10, 10, 10]} intensity={1} />
+                <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
+
                 <MemoizedDeveloper
                   position-y={-3}
                   scale={3}
