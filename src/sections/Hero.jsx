@@ -1,4 +1,4 @@
-import { Suspense, memo, lazy } from "react";
+import { Suspense, memo, lazy, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
 import CanvasLoader from "../components/CanvasLoader";
@@ -15,8 +15,19 @@ const Cube = lazy(() => import("../components/Cube"));
 const Rings = lazy(() => import("../components/Rings"));
 const Target = lazy(() => import("../components/Target"));
 const Next = lazy(() => import("../components/Next"));
-const MemoizedHackerRoom = memo(HackerRoom);
+const HackerRooMemo = memo(HackerRoom);
 const MemoizedCanvasLoader = memo(CanvasLoader);
+const MemoizedHackerRoom = ({ position, rotation, scale, onRendered }) => {
+  useEffect(() => {
+    if (onRendered) {
+      onRendered();
+    }
+  }, [onRendered]);
+
+  return (
+    <HackerRooMemo position={position} rotation={rotation} scale={scale} />
+  );
+};
 
 const Hero = () => {
   // const x = useControls("HackerRoom", {
@@ -34,6 +45,16 @@ const Hero = () => {
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
   const isAwk = useMediaQuery({ minWidth: 1024, maxWidth: 1074 });
   const sizes = calculateSizes(isSmall, isMobile, isTablet, isAwk);
+  const [isRendered, setIsRendered] = useState(false);
+
+  useEffect(() => {
+    if (isRendered) {
+      document.body.style.overflow = "auto";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
+  }, [isRendered]);
+  const poppy = isRendered ? "" : "hidden";
   return (
     <section className="min-h-screen w-full flex flex-col relative" id="home">
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3 z-10 pointer-events-none">
@@ -55,6 +76,7 @@ const Hero = () => {
                 position={sizes.deskPosition}
                 rotation={[-9.5, 3.9, 3.1]}
                 scale={sizes.deskScale}
+                onRendered={() => setIsRendered(true)}
               />
             </HeroCamera>
 
@@ -71,7 +93,9 @@ const Hero = () => {
           </Suspense>
         </Canvas>
       </div>
-      <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
+      <div
+        className={`absolute bottom-7 left-0 right-0 w-full z-10 c-space ${poppy}`}
+      >
         <a href="#about" className="w-fit">
           <Button
             name="Let's work together"

@@ -17,7 +17,7 @@ const About = () => {
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
-            <LazyLoad>
+            <LazyLoad offset={816}>
               <img
                 src="/assets/grid1.png"
                 alt="grid-1"
@@ -35,7 +35,7 @@ const About = () => {
         </div>
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container flex items-center justify-center">
-            <LazyLoad>
+            <LazyLoad offset={700}>
               <img
                 src="/assets/greed.png"
                 alt="grid-2"
@@ -96,7 +96,7 @@ const About = () => {
         </div>
         <div className="xl:col-span-2 xl:row-span-3">
           <div className="grid-container">
-            <LazyLoad>
+            <LazyLoad offset={1608}>
               <img
                 src="/assets/grid3.png"
                 alt="grid-3"
@@ -115,7 +115,7 @@ const About = () => {
         </div>
         <div className="xl:col-span-1 xl:row-span-2">
           <div className="grid-container">
-            <LazyLoad>
+            <LazyLoad offset={720}>
               <img
                 src="assets/grid4.png"
                 alt="alt-4"
@@ -126,7 +126,7 @@ const About = () => {
             <div className="space-y-2">
               <h3 className="grid-subtext text-center ">Contact me</h3>
               <div className="copy-container" onClick={handleCopy}>
-                <LazyLoad>
+                <LazyLoad offset={500}>
                   <img
                     src={hasCopied ? "assets/tick.svg" : "assets/copy.svg"}
                     alt="copy"

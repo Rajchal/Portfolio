@@ -6,7 +6,7 @@ import Clients from "./sections/Clients";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import Experience from "./sections/Experience";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const App = () => {
   const schemaMarkup = {
@@ -22,21 +22,23 @@ const App = () => {
   };
   return (
     <main className="max-w-screen mx-0">
-      <Helmet>
-        <title>Anjal Rajchal - Portfolio</title>
-        <meta
-          name="description"
-          content="Welcome to Anjal Rajchal's portfolio. Explore my projects, experience, and get in touch to learn more about my work and skills."
-        />
-        <meta
-          name="keywords"
-          content="Anjal Rajchal, portfolio, projects, experience, contact, Rajchal, anjal, rajchalanjal, anjalrajchal, anjal rajchal, developer"
-        />
-        <link rel="canonical" href="https://www.rajchal.me" />
-        <script type="application/ld+json">
-          {JSON.stringify(schemaMarkup)}
-        </script>
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <title>Anjal Rajchal - Portfolio</title>
+          <meta
+            name="description"
+            content="Welcome to Anjal Rajchal's portfolio. Explore my projects, experience, and get in touch to learn more about my work and skills."
+          />
+          <meta
+            name="keywords"
+            content="Anjal Rajchal, portfolio, projects, experience, contact, Rajchal, anjal, rajchalanjal, anjalrajchal, anjal rajchal, developer"
+          />
+          <link rel="canonical" href="https://www.rajchal.me" />
+          <script type="application/ld+json">
+            {JSON.stringify(schemaMarkup)}
+          </script>
+        </Helmet>
+      </HelmetProvider>
       <Navbar />
       <Hero />
       <About />
